@@ -26,9 +26,9 @@ pushd git_build
         mv Makefile_tmp Makefile
 
 	# Make fat binaries with ppc/32 bit/64 bit
-        make CFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386" LDFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386" prefix=$PREFIX all
-        make CFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386" LDFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386" prefix=$PREFIX strip
-        $SUDO make CFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386" LDFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386" prefix=$PREFIX install
+        make CFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -arch x86_64" LDFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -arch x86_64" prefix=$PREFIX all
+        make CFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -arch x86_64" LDFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -arch x86_64" prefix=$PREFIX strip
+        $SUDO make CFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -arch x86_64" LDFLAGS="-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -arch x86_64" prefix=$PREFIX install
 
         # contrib
         $SUDO mkdir -p $PREFIX/contrib/completion
